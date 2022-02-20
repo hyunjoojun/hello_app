@@ -4,10 +4,12 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.all
+    @foobar = "Hello"
   end
 
   # GET /users/1 or /users/1.json
   def show
+    @micropost = @user.microposts.first
   end
 
   # GET /users/new
